@@ -1,0 +1,30 @@
+alumnos:
+- item_id: 2
+  matricula: 12345678
+  nombre: wilber
+  edad: 24
+- item_id: 3
+  matricula: 12345677
+  nombre: Miguel
+  edad: 33
+- item_id: 4
+  matricula: 12348645
+  nombre: Angel
+  edad: 21
+- item_id: 5
+  matricula: 9187134612
+  nombre: Luis Miguel
+  Amaterno: Intzin
+  Apaterno: "L\xF3pez"
+  edad: 24
+  correo: lopersmiguel9@gmail.com
+  telefono: 9191221331
+- item_id: 6
+  matricula: 91810334
+  nombre: José Eduardo
+  Amaterno: Nájera
+  Apaterno: "Gómez"
+  edad: 25
+  correo: eduardonajera141@gmail.com
+  telefono: 9982151295
+  carrera: redes inteligentes 
