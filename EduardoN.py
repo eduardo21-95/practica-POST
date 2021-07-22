@@ -31,7 +31,8 @@ async def read_item(request: Request):
 @app.get("/lista", response_class=HTMLResponse)
 async def iniciar(request: Request):
     datos = await cargarJSON()
-    return miPlantilla.TemplateResponse("listaIntegrantes.html",{"request":request,"lista":datos})
+    Bmatricula=0
+    return miPlantilla.TemplateResponse("listaIntegrantes.html",{"request":request,"lista":datos,"Bmatricula":Bmatricula})
 
 
 @app.post("/agregar")
@@ -73,12 +74,22 @@ async def eliminar(request:Request,id:int):
 
     return RedirectResponse("/lista",303)
 
+
+@app.get("/ver_sitiopersonal/{id}")
+async def modificar(request:Request,id:int):
+    datos = await cargarJSON()
+    id1 = datos[id]
+    id2 = id1['item_id']
+    #print (id2)
+    return miPlantilla.TemplateResponse("personal.html",{"request":request,"lista":datos,"id":id2})
+
+
 @app.get("/modificar/{id}")
 async def modificar(request:Request,id:int):
     datos = await cargarJSON()
     id1 = datos[id]
     id2 = id1['item_id']
-    print (id2)
+    #print (id2)
     return miPlantilla.TemplateResponse("modificar.html",{"request":request,"lista":datos,"id":id2})
 
 
@@ -102,10 +113,16 @@ async def modificar(request:Request,id:int):
     await guardarJSON(datos)
     return RedirectResponse("/lista",303)
 
-@app.get("/ver_sitiopersonal/{id}")
-async def modificar(request:Request,id:int):
+@app.post("/buscar")
+async def buscar(request:Request):
     datos = await cargarJSON()
-    id1 = datos[id]
-    id2 = id1['item_id']
-    print (id2)
-    return miPlantilla.TemplateResponse("personal.html",{"request":request,"lista":datos,"id":id2})
+    datos_formulario = await request.form()
+    Bmatricula = datos_formulario["b_matricula"]
+    print (Bmatricula)
+    for fila in datos:
+        if fila.get('matricula') == int(Bmatricula):
+            item_id = fila.get('item_id')
+            print ("este es ",item_id)
+            return miPlantilla.TemplateResponse("buscar.html",{"request":request,"id":item_id, "Bmatricula":Bmatricula,"lista":datos})
+    aviso="si"
+    return miPlantilla.TemplateResponse("listaIntegrantes.html",{"request":request,"lista":datos,"Bmatricula":Bmatricula,"aviso":aviso})

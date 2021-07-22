@@ -1,30 +1,68 @@
-alumnos:
-- item_id: 2
-  matricula: 12345678
-  nombre: wilber
-  edad: 24
-- item_id: 3
-  matricula: 12345677
-  nombre: Miguel
-  edad: 33
-- item_id: 4
-  matricula: 12348645
-  nombre: Angel
-  edad: 21
-- item_id: 5
-  matricula: 9187134612
-  nombre: Luis Miguel
-  Amaterno: Intzin
-  Apaterno: "L\xF3pez"
-  edad: 24
-  correo: lopersmiguel9@gmail.com
-  telefono: 9191221331
-- item_id: 6
-  matricula: 91810334
-  nombre: José Eduardo
-  Amaterno: Nájera
-  Apaterno: "Gómez"
-  edad: 25
-  correo: eduardonajera141@gmail.com
-  telefono: 9982151295
-  carrera: redes inteligentes 
+[
+    {
+        "item_id": 1,
+        "matricula": 918765432,
+        "nombre": "Eduardo",
+        "apaterno": "G\u00f3mez",
+        "amaterno": "N\u00e1jera",
+        "edad": 25,
+        "correo": "eduardonajera141@gmail.com",
+        "telefono": 9982151295,
+        "carrera": "RIyC"
+    },
+    {
+        "item_id": 2,
+        "matricula": 26656456,
+        "nombre": "jos\u00e9",
+        "apaterno": "Hernandez",
+        "amaterno": "Cruz2",
+        "edad": 22,
+        "correo": "jos12@gmail.com",
+        "telefono": 9191047894,
+        "carrera": "RIyC"
+    },
+    {
+        "item_id": 3,
+        "matricula": 1511615,
+        "nombre": "Pedro",
+        "apaterno": "suarez",
+        "amaterno": "Cruz3",
+        "edad": 21,
+        "correo": "petter@gmail.com",
+        "telefono": 9115545674,
+        "carrera": "RIyC"
+    },
+    {
+        "item_id": 4,
+        "matricula": 5654664566,
+        "nombre": "Carlos",
+        "apaterno": "L\u00f3pez",
+        "amaterno": "Cruz4",
+        "edad": 20,
+        "correo": "carl@gmail.com",
+        "telefono": 9191026564,
+        "carrera": "RIyC"
+    },
+    {
+        "item_id": 5,
+        "matricula": 651611166,
+        "nombre": "Felipe",
+        "apaterno": "Solorzano",
+        "amaterno": "Astudillo",
+        "edad": 26,
+        "correo": "Aztu122@gmai.com",
+        "telefono": 919166466,
+        "carrera": "Dise\u00f1o"
+    },
+    {
+        "item_id": 6,
+        "matricula": 52,
+        "nombre": "maria",
+        "apaterno": "chanclas",
+        "amaterno": "Morales",
+        "edad": 28,
+        "correo": "Mari@gmail.com",
+        "telefono": 123456,
+        "carrera": "REDES"
+    }
+]
