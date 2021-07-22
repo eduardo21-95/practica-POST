@@ -123,6 +123,6 @@ async def buscar(request:Request):
         if fila.get('matricula') == int(Bmatricula):
             item_id = fila.get('item_id')
             print ("este es ",item_id)
-            return miPlantilla.TemplateResponse("buscar.html",{"request":request,"id":item_id, "Bmatricula":Bmatricula,"lista":datos})
+            return miPlantilla.TemplateResponse("buscarAlum.html",{"request":request,"id":item_id, "Bmatricula":Bmatricula,"lista":datos})
     aviso="si"
     return miPlantilla.TemplateResponse("listaIntegrantes.html",{"request":request,"lista":datos,"Bmatricula":Bmatricula,"aviso":aviso})
