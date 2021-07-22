@@ -81,7 +81,7 @@ async def modificar(request:Request,id:int):
     id1 = datos[id]
     id2 = id1['item_id']
     #print (id2)
-    return miPlantilla.TemplateResponse("personal.html",{"request":request,"lista":datos,"id":id2})
+    return miPlantilla.TemplateResponse("Sitiopersonal.html",{"request":request,"lista":datos,"id":id2})
 
 
 @app.get("/modificar/{id}")
